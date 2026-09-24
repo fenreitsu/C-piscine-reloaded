@@ -6,16 +6,11 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 16:08:35 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/22 19:46:07 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 16:13:34 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char b)
-{
-	write(1, &b, 1);
-}
+void	ft_putchar(char b);
 
 void	ft_print_alphabet(void)
 {
@@ -23,9 +18,7 @@ void	ft_print_alphabet(void)
 
 	num = 47;
 	while (num++ < 57)
-	{
 		ft_putchar(num);
-	}
 }
 
 /* int	main(void)

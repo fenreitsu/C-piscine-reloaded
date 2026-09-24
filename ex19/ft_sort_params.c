@@ -6,23 +6,30 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 20:07:19 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/24 12:14:37 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 16:21:33 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* #include <unistd.h>
+
+void	ft_putchar(char b)
+{
+	write(1, &b, 1);
+} */
+
+void	ft_putchar(char b);
 
 void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		write(1, &str[i], 1);
+		ft_putchar(str[i]);
 		i++;
 	}
-	write(1, "\n", 1);
+	ft_putchar('\n');
 }
 
 int	ft_strcmp(char *s1, char *s2)

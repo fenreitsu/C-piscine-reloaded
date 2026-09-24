@@ -6,11 +6,11 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 19:15:58 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/23 20:14:19 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 16:16:26 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char b);
 
 void	ft_putstr(char *str)
 {
@@ -19,10 +19,10 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i])
 	{
-		write(1, &str[i], 1);
+		ft_putchar(str[i]);
 		i++;
 	}
-	write(1, "\n", 1);
+	ft_putchar('\n');
 }
 
 int	main(int argc, char **argv)

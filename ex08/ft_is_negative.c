@@ -6,22 +6,18 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 19:57:18 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/22 20:21:15 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 16:13:35 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char b);
 
 void	ft_is_negative(int n)
 {
 	if (n >= 0)
-	{
-		write(1, "P", 1);
-	}
+		ft_putchar('P');
 	else
-	{
-		write(1, "N", 1);
-	}
+		ft_putchar('N');
 }
 
 /* int	main(void)
