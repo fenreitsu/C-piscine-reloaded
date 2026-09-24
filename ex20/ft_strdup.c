@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 12:24:19 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/24 14:27:04 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 14:42:28 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,15 @@ char	*ft_strdup(char *src)
 	int		str_len;
 	char	*str_dup;
 
-	str_len = ft_strlen(src);
-	str_dup = malloc(str_len + 1);
-	str_dup = ft_strcpy(str_dup, src);
-	return (str_dup);
+	if (src == NULL)
+		return (NULL);
+	else
+	{
+		str_len = ft_strlen(src);
+		str_dup = malloc(str_len + 1);
+		str_dup = ft_strcpy(str_dup, src);
+		return (str_dup);
+	}
 }
 
 /* #include <unistd.h>
