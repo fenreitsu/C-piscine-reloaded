@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 18:29:47 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/23 18:46:07 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 21:30:00 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_strlen(char *str)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	while (str[i] != '\0')
 	{
 		i++;

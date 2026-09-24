@@ -6,13 +6,13 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 16:08:35 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/24 16:13:34 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 21:29:21 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char b);
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
 	char	num;
 

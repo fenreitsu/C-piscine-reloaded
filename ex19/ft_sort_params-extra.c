@@ -6,16 +6,9 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 20:07:19 by reiascan          #+#    #+#             */
-/*   Updated: 2026/09/24 21:31:34 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/09/24 21:51:56 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_putchar(char b)
-{
-	write(1, &b, 1);
-}
 
 void	ft_putchar(char b);
 
@@ -24,7 +17,7 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		ft_putchar(str[i]);
 		i++;
@@ -37,43 +30,39 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] && s1[i] == s2[i])
+	while (s1[i] != '\0' && s1[i] == s2[i])
 		i++;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-void	ft_swap(char **str1, char **str2)
+void	ft_swap(char **a, char **b)
 {
-	char	*temp;
+	char	*tmp;
 
-	temp = *str1;
-	*str1 = *str2;
-	*str2 = temp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
 	i = 1;
-	if (argc <= 0)
-		return (0);
-	while (i < argc)
+	while (i < argc - 1)
 	{
-		while (argv[i + 1] != NULL)
+		j = i + 1;
+		while (j < argc)
 		{
-			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
-			{
-				ft_swap(&argv[i], &argv[i + 1]);
-				i = 1;
-			}
-			else
-				i++;
+			if (ft_strcmp(argv[i], argv[j]) > 0)
+				ft_swap(&argv[i], &argv[j]);
+			j++;
 		}
 		i++;
 	}
-	i = 0;
-	while (argv[++i] != NULL)
-		ft_putstr(argv[i]);
+	i = 1;
+	while (i < argc)
+		ft_putstr(argv[i++]);
 	return (0);
 }
